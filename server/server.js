@@ -27,6 +27,8 @@ app.use(session({
 app.use(cors())
 app.use(express.json())
 app.use('/users', userRoutes)
+app.use('/products', productRoutes)
+app.use(express.static('public'))
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
